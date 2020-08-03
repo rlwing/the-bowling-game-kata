@@ -14,6 +14,13 @@ public class GameTest {
     }
 
 //    1. can record rolling of ball
+
+    @Test
+    void canRollBall() {
+        Game game = new Game();
+        game.roll(0);
+    }
+
 //    1. all (20) gutters
 //    1. all (20) ones
 //    1. one spare, one roll with pins down, and the rest (17) gutters
