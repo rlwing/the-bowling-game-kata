@@ -1,5 +1,6 @@
 package com.galvanize.bowling;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -7,17 +8,23 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class GameTest {
 //    ### Acceptance Criteria
 //    1. create a new game
-    @Test
-    void canCreateNewGame() {
-        Game game = new Game();
-        assertNotNull(game);
+//    @Test
+//    void canCreateNewGame() {
+//        Game game = new Game();
+//        assertNotNull(game);
+//    }
+    // Refactor to remove redundancy
+    Game game;
+    @BeforeEach
+    void setUp() {
+        this.game = new Game();
     }
+
 
 //    1. can record rolling of ball
 
     @Test
     void canRollBall() {
-        Game game = new Game();
         game.roll(0);
     }
 
