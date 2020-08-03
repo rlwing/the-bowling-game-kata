@@ -39,6 +39,14 @@ public class GameTest {
     }
 
 //    4. all (20) ones
+    @Test
+    void canScoreAllOnes() {
+        for (int i = 0; i < 20; i++) {
+            game.roll(1);
+        }
+        assertEquals(20, game.score());
+    }
+
 //    5. one spare, one roll with pins down, and the rest (17) gutters
 //    6. one strike, two rolls with pins down, and the rest (16) gutters
 //    7. perfect game - 10 strikes + two 10s (strikes)
