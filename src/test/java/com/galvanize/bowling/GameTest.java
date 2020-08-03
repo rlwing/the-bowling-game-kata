@@ -22,13 +22,14 @@ public class GameTest {
     }
 
 
-//    1. can record rolling of ball
-    @Test
-    void canRollBall() {
-        game.roll(0);
-    }
+//    2. can record rolling of ball
+//No longer necessary, roll is called in test 3
+//    @Test
+//    void canRollBall() {
+//        game.roll(0);
+//    }
 
-//    1. all (20) gutters
+//    3. all (20) gutters
     @Test
     void canScoreGutterGame() {
         for (int i = 0; i < 20; i++) {
@@ -37,8 +38,8 @@ public class GameTest {
         assertEquals(0, game.score());
     }
 
-//    1. all (20) ones
-//    1. one spare, one roll with pins down, and the rest (17) gutters
-//    1. one strike, two rolls with pins down, and the rest (16) gutters
-//    1. perfect game - 10 strikes + two 10s (strikes)
+//    4. all (20) ones
+//    5. one spare, one roll with pins down, and the rest (17) gutters
+//    6. one strike, two rolls with pins down, and the rest (16) gutters
+//    7. perfect game - 10 strikes + two 10s (strikes)
 }
