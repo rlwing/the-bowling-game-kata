@@ -1,8 +1,18 @@
 package com.galvanize.bowling;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class GameTest {
 //    ### Acceptance Criteria
 //    1. create a new game
+    @Test
+    void canCreateNewGame() {
+        Game game = new Game();
+        assertNotNull(game);
+    }
+
 //    1. can record rolling of ball
 //    1. all (20) gutters
 //    1. all (20) ones
