@@ -60,5 +60,17 @@ public class GameTest {
     }
 
 //    6. one strike, two rolls with pins down, and the rest (16) gutters
+
+    @Test
+    void canScore_oneStrike_roll5_roll5_restGutters() {
+        game.roll(10);
+        game.roll(5);
+        game.roll(5);
+        for (int i = 0; i < 16; i++) {
+            game.roll(0);
+        }
+        assertEquals(30, game.score());
+    }
+
 //    7. perfect game - 10 strikes + two 10s (strikes)
 }
